@@ -1,0 +1,221 @@
+*{
+    color: #ffffff;
+}
+
+html , body{
+    height: 100vh;
+}
+.seller-header{
+  height: 70px;
+  background-color: #004494;
+}
+.seller-main{
+    height: calc(100vh - 70px);
+    width:100%
+}
+
+.sidebar-link, .dashboard-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+/* .seller-sidebar{
+    width: 250px !important;
+} */
+.sidebar-link:hover{
+    background-color: #518fd5;
+}
+.dashbord-link{
+    justify-content: space-between;
+}
+.sidebar-link.sActive{
+    background-color: blue;
+}
+.seller-section{
+    background-color: #0056B3;
+}
+.orderSlide{
+    display: none !important;
+}
+.orderSlide.orderActive{
+    display: flex !important;
+}
+.salesCards{
+    position: relative;
+}
+.salesCard{
+    display: none;
+}
+.salesCard.orderActive{
+    display: flex;
+}
+.salesCard, .orderCard {
+    color: #004494 !important;
+    font-weight: 600 !important;
+}
+.salesCard h4, .orderCard h4{
+    font-weight: 600 !important;
+}
+.card-digit{
+    color: #1E7E34 !important;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+
+
+
+    /**************************************************************************       Seller Login Page CSS*/
+    
+    
+    
+    
+    .login-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        width: 100%;
+        max-width: 400px;
+        background-color: #ffffff; /* Semi-major */
+    }
+    .card-header {
+        background-color: #ffffff;
+        color: #0056B3;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        text-align: center;
+        padding: 1.5rem;
+        font-weight: bold;
+      border-bottom: 2px solid #0056B3;
+    }
+    .form-control:focus {
+        border-color: #0056B3;
+        box-shadow: 0 0 0 0.2rem rgba(0,86,179,0.25);
+    }
+    .btn-primary {
+        background-color: #0056B3;
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: #004494;
+    }
+    .form-text a {
+        color: #0056B3;
+        text-decoration: none;
+    }
+    .form-text a:hover {
+        text-decoration: underline;
+    }
+
+
+
+
+
+
+    /**************************************************************************       Seller Sign up Page CSS*/
+
+
+
+
+
+
+    
+    .signup-container {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    h3 {
+      color: #0056B3;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    .form-label {
+      color: black;
+      font-weight: 500;
+    }
+    .btn-primary {
+      background-color: #0056B3;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #004494;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: black;
+    }
+    .login-link a {
+      color: #0056B3;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+
+    @media (max-width:1025px) {
+        .seller-sidebar{
+            justify-content: start !important;
+            gap: 10px !important;
+        }
+        .dashboardMoreInfo{
+            font-size: 14px !important;
+        }
+    }
+    @media (max-width:880px) {
+        .section-first-layer{
+            padding: 0px !important;
+        }
+        .side-bar-divider{
+            border-right: 0.5px solid #ffffff;
+        }
+        .seller-header{
+            border-bottom: 0.5px solid #ffffff;
+        }
+    }
+    @media (max-width:768px) {
+        .dashboardMoreInfo{
+            font-size:11px !important;
+            min-width: fit-content;
+        }
+        .sidebar-link img{
+            width: 28px !important;
+        }
+        .card-title, .card-digit{
+            font-size: 12px !important;
+        }
+        .card-digit{
+            font-size: 18px !important;
+        }
+        .card-phase{
+            height: 20% !important;
+        }
+        .card-bottom-details{
+            font-size: 12px !important;
+        }
+        .cardPrevBtn img, .cardNextBtn img{
+            width: 14px !important;
+        }
+        .category div span{
+            font-size: 12px !important;
+        }
+    }
+    @media (max-width:700px) {
+        .section-second-layer{
+            padding: 1.5rem 20px !important;
+        }
+    }

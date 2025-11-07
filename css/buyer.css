@@ -1,0 +1,105 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************************************************************       Buyer Login Page CSS*/
+
+
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.card-header {
+  background-color: #0056B3;
+  color: #ffffff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+  padding: 1.5rem;
+}
+.form-control:focus {
+  border-color: #0056B3;
+      box-shadow: 0 0 0 0.2rem rgba(0,86,179,0.25);
+    }
+    .btn-primary {
+      background-color: #0056B3;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #004494;
+    }
+    .form-text a {
+      color: #0056B3;
+      text-decoration: none;
+    }
+    .form-text a:hover {
+      text-decoration: underline;
+    }
+    
+    
+    
+    
+    
+    /**************************************************************************       Buyer Signup Page CSS*/
+    
+    
+    .signup-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+    .card-header {
+      background-color: #0056B3;
+      color: #ffffff;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .form-control:focus {
+      border-color: #0056B3;
+      box-shadow: 0 0 0 0.2rem rgba(0,86,179,0.25);
+    }
+    .btn-primary {
+      background-color: #0056B3;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #004494;
+    }
+    .form-text a {
+      color: #0056B3;
+      text-decoration: none;
+    }
+    .form-text a:hover {
+      text-decoration: underline;
+    }

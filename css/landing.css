@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.get-started{
+    font-size: 14px;
+}
+.login, .login-account{
+    font-size: 12px;
+}
+
+
+#settings-profile-btn{
+    display: none;
+}
+
+
+/* ///////////////////// Header CSS////////////////// */
+
+@media (max-width:1120px) {
+    #header-small-screen{
+        display: block;
+    }
+    #header-big-screen{
+        display: none !important;
+    }
+}
+@media (max-width:768px) {
+   .no-history{
+    font-size: 10px !important;
+   }
+}

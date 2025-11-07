@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icons/tradia-favicon-color-256.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/index.global.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.8/index.global.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/seller.css">
+<link rel="stylesheet" href="css/global.css">
+    <title>Seller - Page</title>
+</head>
+<body class="w-100 h-100">
+    <!-- Seller Page -->
+    <div id="body" class="d-flex flex-column w-100" style="height: 100vh;"> 
+
+        <!-- Seller Header Page -->
+        <header class=" seller-header py-3 px-5">
+
+            <!-- Seller Header Container -->
+            <div class="d-flex justify-content-between align-items-center">
+
+                <!-- Tradia Logo -->
+                <img src="assets/images/logos/seller-tradia-logo.png" alt="logo" width="106" height="30">
+
+                <!-- Header Right Content -->
+                <div class="d-flex align-items-center justify-content-right gap-4">
+
+                    <!-- Search icon & Search Bar -->
+                    <div>
+                        <img src="assets/icons/seller-search.svg" alt="search icon" width="18" >
+
+                    </div>
+
+                    <!-- Header Salutation -->
+                    <div>
+                        <span>Welcome back, Emmanuel </span>
+                    </div>
+
+                    <!-- Profile Picture -->
+                    <div>
+                        <a href="#" data-target="wallet"><img src="assets/images/profileplaceholder.jpeg" alt="Profile pic" width="40" style="border-radius: 50%;"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Seller Main Page -->
+        <main class="seller-main d-flex flex-fill">
+
+
+                <!-- Seller Left SideBar -->
+                <div class="py-4 side-bar-divider" style="background-color: #004494;">
+
+                    <!-- Seller Left SideBar Container -->
+                    <div class="d-flex flex-column justify-content-between h-100 seller-sidebar">
+
+                        <!-- DashBoard -->
+                        <div class="d-flex gap-3 align-items-center">
+                            <button type="button" class="border-0 dashboardBtn dashboard-link text-decoration-none px-4"><img src="assets/icons/dashbord.svg" alt="icon" class="dashboard-icon" width="28"><span class="dashboardMoreInfo">Dashboard</span></button>
+                            <button class="exitMoreInfo dashboardMoreInfo border-0" style="padding: 0 5px;"><img src="assets/icons/arrow-90.svg" alt="return" width="14"></button>
+                        </div>
+
+                        <!-- Order Managgement -->
+                        <button class="sidebar-link sActive text-decoration-none px-4 py-2 border-0" data-target="order">
+                            <img src="assets/icons/Order management.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Order Management</span>
+                        </button>
+
+                        <!-- Product -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="product">
+                            <img src="assets/icons/product.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Product</span>
+                        </button>
+
+                        <!-- Analytics -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="analytic">
+                            <img src="assets/icons/Analysis.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Analytics</span></a>
+                        </button>
+
+                        <!-- Messagges -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="message">
+                            <img src="assets/icons/chat-dots.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Messages</span></a>
+                        </button>
+
+                        <!-- Wallet -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="wallet">
+                            <img src="assets/icons/wallet.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Wallet</span></a>
+                        </button>
+
+                        <!-- Store Settings -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="storeSettings">
+                            <img src="assets/icons/gear-wide-connected.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Store Settings</span></a>
+                        </button>
+
+                        <!-- Review & Ratings -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="reviewRatings">
+                            <img src="assets/icons/star.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Review & Ratings</span></a>
+                        </button>
+
+                        <!-- Notification Center -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="notifications">
+                            <img src="assets/icons/bell.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Notification Center</span></a>
+                        </button>
+
+                        <!-- Support -->
+                        <button class="sidebar-link text-decoration-none px-4 py-2 border-0" data-target="support">
+                            <img src="assets/icons/question-circle.svg" alt="icon" width="28">
+                            <span class="dashboardMoreInfo">Support</span></a>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Seller Sections -->
+                <section class="seller-section h-100 flex-fill">
+
+                    <!-- Order Management Section -->
+                    <div id="order" class="section active p-5 h-100 section-first-layer">
+
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <!-- Order Slides -->
+                            <div class="position-relative orderSlides h-100 overflow-hidden" >
+
+                                <!-- New Orrder Slide Index 0 -->
+                                <div class="d-flex flex-column gap-4 align-items-center flex-fill h-100  orderSlide orderActive">
+
+                                    <!-- New Oder Title -->
+                                    <h5>New Orders</h5>
+
+                                   <div class="w-100" style="overflow-y: scroll; height: 100%;">
+                                         <!-- New Order Contents -->
+                                        <div class="d-flex flex-column  align-items-start gap-2 w-100 h-100 flex-fill" style="overflow-y: scroll;">
+
+                                            <!-- New Order - Buyer Order 1 -->
+                                            <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+    
+                                                <!-- Buyer Profile -->
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                    <span style="width: 200px; font-size: 12px; color: #004494;">Mary James Peter</span>
+                                                </div>
+
+                                                <!-- View Order Btn -->
+                                                <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                                <!-- Accept and Cancel Order Btn -->
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button class="pri-btn" style="border: 1px solid #004494; border-radius: 20px;">Accept</button>
+                                                    <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">Cancel</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- New Order - Buyer Order 2 -->
+                                            <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                                <!-- Buyer Profile -->
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                    <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                                </div>
+
+                                                <!-- View Order Btn -->
+                                                <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                                <!-- Accept and Cancel Order Btn -->
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button class="pri-btn" style="border: 1px solid #004494; border-radius: 20px;">Accept</button>
+                                                    <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">Cancel</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                   </div>
+                                </div>
+
+
+                                <!-- Accepted Orders Slide Index 1 -->
+                                <div class="d-flex flex-column gap-4 align-items-center flex-fill orderSlide">
+
+                                    <!-- Accepted Orders Title -->
+                                    <h5>Accepted Orders</h5>
+
+                                    <!-- Accepted Order Contents -->
+                                    <div class="d-flex flex-column  align-items-start gap-2 w-100 h-100 flex-fill" style="overflow: scroll;">
+
+                                        <!-- Accepted Order - Buyer Order 1 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">Mary James Peter</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 2 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">Gift Joy</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 3 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 4 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 5 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 6 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 7 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 8 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 9 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 10 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 10 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Accepted Order - Buyer Order 10 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/check-clc.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- Cancelled Orders Slide Index 2 -->
+                                <div class="d-flex flex-column gap-4 align-items-center flex-fill orderSlide">
+
+                                    <!-- Canceled Oder Title -->
+                                    <h5>Cancelled Orders</h5>
+
+                                    <!-- Canceled Order Contents -->
+                                    <div class="d-flex flex-column  align-items-start gap-2 w-100 h-100 flex-fill" style="overflow: scroll;">
+
+                                        <!-- Canceled Order 1 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">Mary James Peter</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/cancel.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Canceled Order 2 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">Gift Joy</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/cancel.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Canceled Order 3 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/cancel.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Canceled Order 4 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">Mary James Peter</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/cancel.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Canceled Order 5 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">Gift Joy</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/cancel.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Canceled Order 6 -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                            <!-- Buyer Profile -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                            </div>
+
+                                            <!-- View Order Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Order</button>
+
+                                            <!-- Accept and Cancel Order Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="border-0" ><img src="assets/icons/cancel.svg" alt="Accepted"></button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                                <button class="position-absolute border-0 prevBtn" style="top: 0rem; left: 25%;"><img src="assets/icons/prevBtn.svg" alt="PrevBtn"></button>
+                                <button class="position-absolute border-0 nextBtn" style="top: 0rem; right: 25%;"><img src="assets/icons/nextBtn.svg" alt="nextBtn"></button>
+                            </div>
+
+                        </div>
+                            
+                    </div>
+
+                    <!-- Product Section -->
+                    <div id="product" class="section p-5 h-100 section-first-layer">
+                        
+                        <!-- Product Container -->
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <!-- Products -->
+                            <div class="d-flex flex-column gap-4 align-items-center w-100 h-100" >
+
+                                    <!-- Product Title -->
+                                    <div>
+                                        <h5>Products</h5>
+                                    </div>
+
+                                    <!-- Product Contents -->
+                                    <div class="d-flex flex-column align-items-start gap-2 w-100 productContent" style="flex: 1; height: 70%; overflow: scroll;" >
+
+                                        <!-- Category -->
+                                        <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4 category">
+
+                                            <!-- Category Name -->
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <span style="width: 200px; font-size: 14px;font-weight: 600; color: #004494;">Category Name</span>
+                                            </div>
+
+                                            <!-- View Category Btn -->
+                                            <button class="sec-btn" style="border: 1px solid #004494; border-radius: 20px;">View Category</button>
+
+                                            <!-- Add Product Btn -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="pri-btn" style="border: 1px solid #004494; border-radius: 20px;">Add Product</button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <!-- Add New Category Btn -->
+                                    <div>
+                                        <button class="sec-btn rounded-0 addCategory" style="padding: 2px;" title="Add New Category"><img src="assets/icons/addCart.svg" width="20" alt="Add Category"></button>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Section -->
+                    <div id="analytic" class="section p-5 h-100 section-first-layer">
+                        
+                        <!-- Analytics Container -->
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <!-- Analytics -->
+                            <div class="d-flex flex-column gap-4 align-items-center w-100 h-100">
+                                
+                                    <!-- Analytic Title -->
+                                    <div>
+                                        <h5>Analytics</h5>
+                                    </div>
+
+                                    <!-- Analytic Content -->
+                                    <div class="d-flex flex-column h-100 w-100 gap-3">
+
+                                        <!-- Analytic Cards Phase 1 -->
+                                        <div class="d-flex justify-content-center gap-3 w-100 card-phase" style="height: 33.3333333333%;">
+
+                                            <!-- Analytic Card 1 (Total Sales) -->
+                                            <div class="p-3 seller-analytic" style="background-color: #ffffff; width: 40%; border-radius: 35px; overflow: hidden;">
+
+                                                <!-- Analytic Sales Card -->
+                                                 <div class="h-100 salesCards">
+
+                                                    <!-- Daily Sales Card -->
+                                                     <div class="flex-column align-items-center justify-content-between gap-2 h-100 salesCard orderActive">
+
+                                                         <h4 class="card-title">Total Sales</h4>
+                                                         <span class="card-digit" id="dailySales">6.77</span>
+                                                         
+                                                         <!-- Sales Card Title (Daily) -->
+                                                         <h5 class="card-bottom-details">Daily</h5>
+
+                                                     </div>
+
+                                                    <!-- Weekly Sales Card -->
+                                                     <div class="flex-column align-items-center justify-content-between gap-2 h-100 salesCard">
+
+                                                        <h4 class="card-title">Total Sales</h4>
+                                                         <span class="card-digit" id="weeklySales">12.30</span>
+                                                         
+                                                         <!-- Sales Card Title (Weekly) -->
+                                                         <h5 class="card-bottom-details">Weekly</h5>
+
+                                                     </div>
+
+                                                    <!-- Monthly Sales Card -->
+                                                     <div class="flex-column align-items-center justify-content-between gap-2 h-100 salesCard">
+
+                                                        <h4 class="card-title">Total Sales</h4>
+                                                         <span class="card-digit" id="monthlySales">54.00</span>
+                                                         
+                                                         <!-- Sales Card Title (Monthly) -->
+                                                         <h5 class="card-bottom-details">Monthly</h5>
+
+                                                     </div>
+
+                                                    <!-- Yearly Sales Card -->
+                                                     <div class="flex-column align-items-center justify-content-between gap-2 h-100 salesCard">
+
+                                                        <h4 class="card-title">Total Sales</h4>
+                                                         <span class="card-digit" id="yearlySales">345.54</span>
+                                                         
+                                                         <!-- Sales Card Title (Yearly) -->
+                                                         <h5 class="card-bottom-details">Yearly</h5>
+
+                                                     </div>
+
+                                                    <!-- All Sales Card -->
+                                                     <div class="flex-column align-items-center justify-content-between gap-2 h-100 salesCard">
+
+                                                        <h4 class="card-title">Total Sales</h4>
+                                                         <span class="card-digit" id="allTimeSales">60,089.00</span>
+                                                         
+                                                         <!-- Sales Card Title (All Time) -->
+                                                         <h5 class="card-bottom-details">All Time</h5>
+
+                                                     </div>
+
+                                                    <button class="position-absolute border-0 cardPrevBtn" style="bottom: 0.3rem; left: 25%;"><img src="assets/icons/prevCardBtn.svg" alt="PrevBtn"></button>
+                                                    <button class="position-absolute border-0 cardNextBtn" style="bottom: 0.3rem; right: 25%;"><img src="assets/icons/cardNextBtn.svg" alt="nextBtn"></button>
+                                                 </div>
+
+                                            </div>
+
+                                            <!-- Analytic Card 2 (Total Order) -->
+                                            <div class="p-3 seller-analytic" style="background-color: #ffffff; width: 40%; border-radius: 35px;">
+
+                                                <!-- Total Orders Card -->
+                                                <div class="d-flex flex-column align-items-center justify-content-between gap-2 h-100 orderCard">
+
+                                                    <h4 class="card-title">Total Orders</h4>
+                                                    <span class="card-digit" id="totalOrder">12,005</span>
+                                                    <span class="card-bottom-details" style="color: #004494;">Cleared</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Analytic Cards Phase 2 -->
+                                        <div class="d-flex justify-content-center gap-3 w-100 card-phase" style="height: 33.3333333333%;">
+
+                                            <!-- Analytic Card 3 (Pending & Completed Orders) -->
+                                            <div class="p-3 seller-analytic" style="background-color: #ffffff; width: 40%; border-radius: 35px;">
+                                                
+                                                 <!-- Order Overview Pending and completed Orders -->
+                                                     <div class="d-flex flex-column align-items-center justify-content-between gap-2 h-100 orderCard">
+
+                                                         <h4 class="card-title">Pending - Completed</h4>
+                                                         <div class="card-digit">
+                                                            <span class="card-digit" id="pendingOrders">0</span> - <span class="card-digit" id="completedOrders">10,035</span>
+                                                         </div>
+                                                         
+                                                         <!-- Sales Card Title (Daily) -->
+                                                         <button class="border-0 pri-btn">View</button>
+
+                                                     </div>
+
+                                            </div>
+
+                                            <!-- Analytic Card 4 (Top Selling Products) -->
+                                            <div class="p-3 seller-analytic" style="background-color: #ffffff; width: 40%; border-radius: 35px;">
+
+                                                <!-- Order Overview Pending and completed Orders -->
+                                                     <div class="d-flex flex-column align-items-center justify-content-between gap-2 h-100 orderCard">
+
+                                                         <h4 class="card-title">Top Selling Product</h4>
+                                                         <span class="card-digit" id="dailySales">10.00</span>
+                                                         
+                                                         <!-- Sales Card Title (Daily) -->
+                                                         <button class="border-0 pri-btn">View</button>
+
+                                                     </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Analytic Cards Phase 3 -->
+                                        <div class="d-flex justify-content-center gap-3 w-100 card-phase" style="height: 33.3333333333%;">
+
+                                            <!-- Analytic Card 5 (Graph) -->
+                                            <div class="p-2 seller-analytic" style="background-color: #ffffff; width: 45%; border-radius: 35px;">
+                                                
+                                                <div id="graph" class="h-100 w-100">
+
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Analytic Card 6 (Date) -->
+                                            <div class="p-2 seller-analytic" style="background-color: #ffffff; width: 45%; border-radius: 35px;">
+                                                
+                                                <div id="calendar" class="h-100 w-100">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+ 
+                                    </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    <!-- Messages Section -->
+                    <div id="message" class="section p-5 h-100 section-first-layer">
+
+                        <!-- Messagge Section Container -->
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <!-- Messages -->
+                            <div class="d-flex flex-column gap-4 align-items-center flex-fill h-100">
+
+                                <!-- New Oder Title -->
+                                <h5>Messages</h5>
+
+                                <div class="w-100" style="overflow-y: scroll; height: 100%;">
+
+                                        <!-- Message Contents Idexes -->
+                                    <div class="d-flex flex-column  align-items-start gap-2 w-100 h-100 flex-fill" style="overflow-y: scroll;">
+
+                                        <!-- Message index 0 -->
+                                        <a href="" class="text-decoration-none w-100">
+                                            <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                                <!-- Buyer Profile -->
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                    <span style="width: 200px; font-size: 12px; color: #004494;">Mary James Peter</span>
+                                                </div>
+
+                                                
+
+                                                <!-- Time and Date -->
+                                                <div class="d-flex justify-content-right align-items-center gap-2">
+                                                    <span style="color: #004494; font-size: 10px;">12:32pm</span>
+                                                    <span style="color: #004494; font-size: 10px;">Today</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <!-- Message index 1 -->
+                                        <a href="" class="text-decoration-none w-100"> 
+                                            <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                                <!-- Buyer Profile -->
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                    <span style="width: 200px; font-size: 12px; color: #004494;">Gift Joy</span>
+                                                </div>
+
+                                                
+
+                                                <!-- Time and Date -->
+                                                <div class="d-flex justify-content-right align-items-center gap-2">
+                                                    <span style="color: #004494; font-size: 10px;">6:41pm</span>
+                                                    <span style="color: #004494; font-size: 10px;">Today</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <!-- Message index 2 -->
+                                        <a href="" class="text-decoration-none w-100">
+                                            <div class="d-flex p-2 justify-content-between align-items-center w-100 bg-white rounded-4">
+
+                                                <!-- Buyer Profile -->
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <img src="assets/images/profileplaceholder.jpeg" alt="buyer profile picture" width="24" class="rounded-circle">
+                                                    <span style="width: 200px; font-size: 12px; color: #004494;">John Johnson</span>
+                                                </div>
+
+                                                
+
+                                                <!-- Time and Date -->
+                                                <div class="d-flex justify-content-right align-items-center gap-2">
+                                                    <span style="color: #004494; font-size: 10px;">7:06am</span>
+                                                    <span style="color: #004494; font-size: 10px;">Yesterday</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <!-- Wallet Section -->
+                    <div id="wallet" class="section p-5 h-100 section-first-layer">
+                        
+                        <!-- Wallet Section Container -->
+                        <div class="p-5  h-100 section-second-layer" style="background-color: #004494;">
+
+                            <div class="d-flex flex-column align-items-center h-100 overflow-scroll bg-white">
+
+
+                                <!-- Cover Profile and Profile Picture -->
+
+                                <div class="w-100">
+                                    <img src="assets/images/coverphoto.jpeg" alt="Cover Photo" class="w-100" style="height:300px; object-fit:cover; object-position: center;">
+                                </div>
+
+                              
+
+
+                                <!-- Account Balance Profile -->
+                                <div class="d-flex align-items-center justify-content-between account p-4 w-100" style="margin-top: calc(-80px); " title="Seller is verified">
+
+                                    <!-- Left: Profile -->
+                                    <div class="d-flex align-items-end gap-3 ms-3" style="width: fit-content;">
+                                        <div class="profile">
+                                            <img src="assets/images/profileplaceholder.jpeg" alt="Profile Picture">
+                                        </div>
+                                        <div class="d-flex flex-column profile">
+                                            <div class="d-flex align-items-center gap-3 fullname" style="height: fit-content;">
+                                                <span>Emmanuel Ojonugwa Audu</span>
+                                                <img src="assets/icons/verifyicon.svg" alt="Verification icon" style="object-fit: contain; width: 24px; height: 24px;">
+                                            </div>
+                                            <div class=" d-flex align-items-center gap-md-5 status">
+                                                <span>Balance</span>
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="button" id="seller-balanceBtn">
+                                                        <img src="assets/icons/eye-slash-fill.svg" alt="Visibility" id="seller-balance-visibility">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="amount">
+                                                <div style="min-width: 230px;">
+                                                    <span id="currency">N</span>
+                                                    <span id="seller-balance">213,300.45</span>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Right: Settings -->
+                                    <button type="button" data-target="storeSettings" title="Settings">
+                                        <img src="assets/icons/gear-fill.svg" alt="Settings" id="settings-profile-btn">
+                                    </button>
+                                </div>
+
+
+                                <!-- Account Actions -->
+                                <div class="p-4 action-btn-container bg-white w-100">
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 action-btn">
+                                        <button class="d-flex align-items-center gap-2 pri-btn">deposit
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cash-stack"
+                                                viewBox="0 0 16 16">
+                                                <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                                                <path
+                                                    d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z" />
+                                            </svg>
+                                        </button>
+                                        <button class="d-flex align-items-center gap-2 pri-btn">
+                                            tradia
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-bank"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z" />
+                                            </svg>
+                                        </button>
+                                        <button class="d-flex align-items-center gap-2 pri-btn">
+                                            others
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-bank"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z" />
+                                            </svg>
+                                        </button>
+                                        <button class="d-flex align-items-center gap-2 pri-btn">
+                                            Recharge
+                                        </button>
+                                        <button class="d-flex align-items-center gap-2 pri-btn">
+                                            crypto
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0" />
+                                                <path
+                                                    d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z" />
+                                                <path
+                                                    d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z" />
+                                                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 3 Recent Purchase Histories -->
+                                <div class="d-flex flex-column w-100 p-4 gap-3 recent-histories bg-white mt-0">
+
+                                <!-- Heading -->
+                                <div class="history">
+                                    <span>Recent Completed Orders</span>
+                                </div>
+
+                                <hr style="border: 1px solid #004494;">
+
+                                <!-- All Purchase Histories -->
+                                <div class="d-flex flex-column gap-3">
+
+
+                                    
+                                    <!-- Purchase History 1-->
+                                    <div class="history-container">
+                                        <div class="flex-grow-1" style="height: 100%;">
+
+                                            <!-- Initial -->
+                                            <div class="initial w-100">
+                                                <!-- Seller's Profile -->
+                                                <a href="#" class="text-decoration-none">
+                                                    <div class="d-flex align-items-center gap-2 seller-profile">
+                                                        <img src="assets/images/profileplaceholder.jpeg" alt="" class="purchase-pic">
+                                                        <div class="purchase-fullname d-flex">
+                                                            <span>Collins Stephen Kitchen</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <!-- Progress Bar -->
+                                                <div class="d-flex flex-row justify-content-around align-items-center progress-bar">
+                                                    <span>Purchased</span>
+                                                    <img src="assets/icons/arrows1.svg" alt="">
+                                                    <span>Processing</span>
+                                                    <img src="assets/icons/arrows1.svg" alt="">
+                                                    <span>Delivered</span>
+                                                </div>
+
+                                                <!-- Date & Time -->
+                                                <div class="d-flex gap-4 d-t">
+                                                    <span>Today</span>
+                                                    <span>12:33pm</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- More Details -->
+                                            <div class="more-detail w-100">
+                                                <div class="d-flex gap-2 py-2 flex-column align-items-center flex-grow-1">
+
+                                                    <!-- Seller's Profile -->
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="assets/images/profileplaceholder.jpeg" alt="" class="purchase-pic">
+                                                            <div class="purchase-fullname">
+                                                                <span>Collins Stephen Kitchen</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <!-- Progress Bar -->
+                                                    <div class="d-flex flex-row justify-content-around align-items-center progress-bar">
+                                                        <span>Purchased</span>
+                                                        <img src="assets/icons/arrows1.svg" alt="">
+                                                        <span>Processing</span>
+                                                        <img src="assets/icons/arrows1.svg" alt="">
+                                                        <span>Delivered</span>
+                                                    </div>
+
+                                                    <!-- Details -->
+                                                    <div class="history-details w-100">
+                                                        <div class="detail">
+                                                            <span class="history-prop">Date:</span>
+                                                            <span class="history-val">8/9/25</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Time:</span>
+                                                            <span class="history-val">12:33pm</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Transaction ID:</span>
+                                                            <span class="history-val">523943855</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Session ID:</span>
+                                                            <span class="history-val">292206548</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Purchase ID:</span>
+                                                            <span class="history-val">982958195</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <button class="sec-btn">View Purchase</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Toggle Button -->
+                                        <div class="d-flex align-items-start">
+                                            <button type="button" class="border-0" id="h-tgl-btn">
+                                        <img src="assets/icons/Expand.svg" alt="Collapsible">
+                                        </button>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Purchase History 2-->
+                                    <div class="history-container">
+                                        <div class="flex-grow-1" style="height: 100%;">
+
+                                            <!-- Initial -->
+                                            <div class="initial w-100">
+                                                <!-- Seller's Profile -->
+                                                <a href="#" class="text-decoration-none">
+                                                    <div class="d-flex align-items-center gap-2 seller-profile">
+                                                        <img src="assets/images/profileplaceholder.jpeg" alt="" class="purchase-pic">
+                                                        <div class="purchase-fullname d-flex">
+                                                            <span>Chicken Republic</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <!-- Progress Bar -->
+                                                <div class="d-flex flex-row justify-content-around align-items-center progress-bar">
+                                                    <span>Purchased</span>
+                                                    <img src="assets/icons/arrows1.svg" alt="">
+                                                    <span>Processing</span>
+                                                    <img src="assets/icons/arrows1.svg" alt="">
+                                                    <span>Delivered</span>
+                                                </div>
+
+                                                <!-- Date & Time -->
+                                                <div class="d-flex gap-4 d-t">
+                                                    <span>Yesterday</span>
+                                                    <span>7:23pm</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- More Details -->
+                                            <div class="more-detail w-100">
+                                                <div class="d-flex gap-2 py-2 flex-column align-items-center flex-grow-1">
+
+                                                    <!-- Seller's Profile -->
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="assets/images/profileplaceholder.jpeg" alt="" class="purchase-pic">
+                                                            <div class="purchase-fullname">
+                                                                <span>Chicken Republic</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <!-- Progress Bar -->
+                                                    <div class="d-flex flex-row justify-content-around align-items-center progress-bar">
+                                                        <span>Purchased</span>
+                                                        <img src="assets/icons/arrows1.svg" alt="">
+                                                        <span>Processing</span>
+                                                        <img src="assets/icons/arrows1.svg" alt="">
+                                                        <span>Delivered</span>
+                                                    </div>
+
+                                                    <!-- Details -->
+                                                    <div class="history-details w-100">
+                                                        <div class="detail">
+                                                            <span class="history-prop">Date:</span>
+                                                            <span class="history-val">7/9/25</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Time:</span>
+                                                            <span class="history-val">7:23pm</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Transaction ID:</span>
+                                                            <span class="history-val">523943855</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Session ID:</span>
+                                                            <span class="history-val">292206548</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Purchase ID:</span>
+                                                            <span class="history-val">982958195</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <button class="sec-btn">View Purchase</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Toggle Button -->
+                                        <div class="d-flex align-items-start">
+                                            <button type="button" class="border-0" id="h-tgl-btn">
+                                        <img src="assets/icons/Expand.svg" alt="Collapsible">
+                                        </button>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Purchase History 3-->
+                                    <div class="history-container">
+                                        <div class="flex-grow-1" style="height: 100%;">
+
+                                            <!-- Initial -->
+                                            <div class="initial w-100">
+                                                <!-- Seller's Profile -->
+                                                <a href="#" class="text-decoration-none">
+                                                    <div class="d-flex align-items-center gap-2 seller-profile">
+                                                        <img src="assets/images/profileplaceholder.jpeg" alt="" class="purchase-pic">
+                                                        <div class="purchase-fullname d-flex">
+                                                            <span>John Smith</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <!-- Progress Bar -->
+                                                <div class="d-flex flex-row justify-content-around align-items-center progress-bar">
+                                                    <span>Purchased</span>
+                                                    <img src="assets/icons/arrows1.svg" alt="">
+                                                    <span>Processing</span>
+                                                    <img src="assets/icons/arrows1.svg" alt="">
+                                                    <span>Delivered</span>
+                                                </div>
+
+                                                <!-- Date & Time -->
+                                                <div class="d-flex gap-4 d-t">
+                                                    <span>6/9/25</span>
+                                                    <span>8:56am</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- More Details -->
+                                            <div class="more-detail w-100">
+                                                <div class="d-flex gap-2 py-2 flex-column align-items-center flex-grow-1">
+
+                                                    <!-- Seller's Profile -->
+                                                    <a href="#" class="text-decoration-none">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="assets/images/profileplaceholder.jpeg" alt="" class="purchase-pic">
+                                                            <div class="purchase-fullname">
+                                                                <span>John Smith</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <!-- Progress Bar -->
+                                                    <div class="d-flex flex-row justify-content-around align-items-center progress-bar">
+                                                        <span>Purchased</span>
+                                                        <img src="assets/icons/arrows1.svg" alt="">
+                                                        <span>Processing</span>
+                                                        <img src="assets/icons/arrows1.svg" alt="">
+                                                        <span>Delivered</span>
+                                                    </div>
+
+                                                    <!-- Details -->
+                                                    <div class="history-details w-100">
+                                                        <div class="detail">
+                                                            <span class="history-prop">Date:</span>
+                                                            <span class="history-val">6/9/25</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Time:</span>
+                                                            <span class="history-val">8:56am</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Transaction ID:</span>
+                                                            <span class="history-val">523943855</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Session ID:</span>
+                                                            <span class="history-val">292206548</span>
+                                                        </div>
+                                                        <div class="detail">
+                                                            <span class="history-prop">Purchase ID:</span>
+                                                            <span class="history-val">982958195</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <button class="sec-btn">View Purchase</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Toggle Button -->
+                                        <div class="d-flex align-items-start">
+                                            <button type="button" class="border-0" id="h-tgl-btn">
+                                        <img src="assets/icons/Expand.svg" alt="Collapsible">
+                                        </button>
+                                        </div>
+                                    </div>
+
+
+                                    <button type="button" class="border-0"><a href="" data-target="purchases" class="sec-btn">See all</a></button>
+                                </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Store Settings Section -->
+                    <div id="storeSettings" class="section p-5 h-100 section-first-layer">
+                        
+                        <!-- Store Settings Section Container -->
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <div class="d-flex flex-column px-5 py-4 settings gap-4 bg-white h-100 overflow-scroll">
+
+                                <!-- Profile Picture -->
+                                <div class="d-flex align-items-center setting-pro-initial">
+                                <img src="assets/images/profileplaceholder.jpeg" alt="profile picture">
+                                <div class="d-flex flex-column justify-content-between gap-4">
+                                    <span>Emmanuel Ojonugwa Audu</span>
+                                    <input type="file" id="profileUpload" accept="image/*" hidden>
+                                    <button class="border-0 pri-btn upload-btn" onclick="document.getElementById('profileUpload').click()">Upload Picture</button>
+                                </div>
+                                </div>
+
+                                <hr style="border-color: #004494;">
+
+                                <!-- Change Username -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                <form action="" class="d-flex flex-column gap-2 set-property">
+                                    <h5>Change Username <span>(rechange after 365 days!)</span></h5>
+                                    <div class="d-flex update-content">
+                                    <span>New:</span><input type="text" name="newUsername" id="newUsername" maxlength="24">
+                                    </div>
+                                    <div class="d-flex px-md-5 gap-md-5 justify-content-end reset-btn">
+                                        <button type="submit" class="sec-btn change-btn">Change</button>
+                                        <button type="button" class="border-0 pri-btn verify-btn">Verify</button>
+                                    </div>
+                                </form>
+                                <div>
+                                    <img src="assets/icons/check-clc.svg" class="proUpdate" alt="Property Updated" width="28" height="28">
+                                </div>
+                                </div>
+
+                                <hr style="border-color: #004494;">
+
+                                <!-- Change Email -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                <form action="" class="d-flex flex-column gap-2 set-property">
+                                    <h5>Change Email</h5>
+                                    <div class="d-flex update-content"><span>Current:</span><input type="email" name="currentEmail" id="currentEmail" maxlength="50"></div>
+                                    <div class="d-flex update-content"><span>New:</span><input type="email" name="newEmail" id="newEmail" maxlength="50"></div>
+                                    <div class="d-flex px-md-5 gap-md-5 justify-content-end reset-btn">
+                                        <button type="submit" class="sec-btn change-btn">Change</button>
+                                        <button type="button" class="border-0 pri-btn verify-btn">Verify</button>
+                                    </div>
+                                </form>
+                                <div>
+                                    <img src="assets/icons/check-clc.svg" class="proUpdate" alt="Property Updated" width="28" height="28">
+                                </div>
+                                </div>
+
+                                <hr style="border-color: #004494;">
+
+                                <!-- Change Password -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                <form action="" class="d-flex flex-column gap-2 set-property">
+                                    <h5>Change Password</h5>
+                                    <div class="d-flex update-content"><span>Current:</span><input type="password" name="currentPassword" id="currentPassword"></div>
+                                    <div class="d-flex update-content"><span>New:</span><input type="password" name="newPassword" id="newPassword" minlength="6"></div>
+                                    <div class="d-flex update-content"><span>Re Enter:</span><input type="password" name="reEnteredPassword" id="reEnteredPassword" minlength="6"></div>
+                                    <div class="d-flex px-md-5 gap-md-5 justify-content-end reset-btn">
+                                        <button type="submit" class="sec-btn change-btn">Change</button>
+                                        <button type="button" class="border-0 pri-btn verify-btn">Verify</button>
+                                    </div>
+                                </form>
+                                <div>
+                                    <img src="assets/icons/check-clc.svg" class="proUpdate" alt="Property Updated" width="28" height="28">
+                                </div>
+                                </div>
+
+                                <hr style="border-color: #004494;">
+
+                                <!-- Change Phone -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                <form action="" class="d-flex flex-column gap-2 set-property">
+                                    <h5>Change Phone</h5>
+                                    <div class="d-flex update-content"><span>Current:</span>+234<input type="number" name="currentPhone" id="currentPhone" maxlength="10"></div>
+                                    <div class="d-flex update-content"><span>New:</span>+234<input type="number" name="newPhone" id="newPhone" maxlength="10"></div>
+                                    <div class="d-flex px-md-5 gap-md-5 justify-content-end reset-btn">
+                                    <button type="submit" class="sec-btn change-btn">Change</button>
+                                    <button type="button" class="border-0 pri-btn verify-btn">Verify</button>
+                                    </div>
+                                </form>
+                                <div>
+                                    <img src="assets/icons/check-clc.svg" class="proUpdate" alt="Property Updated" width="28" height="28">
+                                </div>
+                                </div>
+
+                                <hr style="border-color: #004494;">
+
+                                <!-- Change Address -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                <form action="" class="d-flex flex-column gap-2 set-property">
+                                    <h5>Change Address <span>(admin validation required)</span></h5>
+                                    <div class="d-flex update-content"><span>Current:</span><input type="text" name="currentAddress" id="currentAddress"></div>
+                                    <div class="d-flex update-content"><span>New:</span><input type="text" name="newAddress" id="newAddress"></div>
+                                    <div class="d-flex px-md-5 gap-md-5 justify-content-end reset-btn">
+                                    <button type="submit" class="sec-btn change-btn">Change</button>
+                                    <button type="button" class="border-0 pri-btn verify-btn">Verify</button>
+                                    </div>
+                                </form>
+                                <div>
+                                    <img src="assets/icons/check-clc.svg" class="proUpdate" alt="Property Updated" width="28" height="28">
+                                </div>
+                                </div>
+
+                                <hr style="border-color: #004494;">
+
+                                <!-- Change Notification Mode -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-column gap-2 set-property">
+                                    <h5>Change Notification Mode <span>(admin validation required)</span></h5>
+                                    <ul>
+                                        <li class="d-flex"><span>Email notifications</span> <img src="assets/icons/tgl-icon-on.svg" alt="" id="notification" ></li>
+                                        <li class="d-flex"><span>SMS notifications</span> <img src="assets/icons/tgl-icon-off.svg" alt="" id="notification"></li>
+                                        <li class="d-flex"><span>In-app notifications</span> <img src="assets/icons/tgl-icon-off.svg" alt="" id="notification"></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src=""  alt="" >
+                                </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Review & Ratings Section -->
+                    <div id="reviewRatings" class="section p-5 h-100 section-first-layer">
+                        
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <div>
+                                Review and Ratings
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Notification Center Section -->
+                    <div id="notifications" class="section p-5 h-100 section-first-layer">
+                        
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <div>
+                                Notifications
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Support Section -->
+                    <div id="support" class="section p-5 h-100 section-first-layer">
+                                            
+                        <div class="p-5 h-100 section-second-layer" style="background-color: #004494;">
+
+                            <div>
+                                Support
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script type="module" src="js/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+</body>
+</html>

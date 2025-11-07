@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icons/tradia-favicon-color-256.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/buyer.css">
+    <title>Tradia.ng - Buyer Sign up</title>
+</head>
+<body style="font-family: 'Segoe UI', sans-serif;">
+    
+
+    <div class="signup-container">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="mb-0">Buyer Sign Up</h3>
+    </div>
+    <div class="card-body p-4">
+      <form>
+        <!-- Full Name -->
+        <div class="mb-3">
+          <label for="name" class="form-label text-dark">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label text-dark">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-3">
+          <label for="phone" class="form-label text-dark">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label text-dark">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label text-dark">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" required>
+        </div>
+
+        <!-- Sign Up Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+        </div>
+
+        <!-- Already have account -->
+        <p class="form-text text-center mt-3 text-dark">
+          Already have an account? <a href="buyer-login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script type="module" src="js/bundle.js"></script>
+</body>
+</html>
